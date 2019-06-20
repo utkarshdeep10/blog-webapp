@@ -1,0 +1,20 @@
+.container.main{
+    margin-top: 7.0em;
+}
+
+#head{
+    margin-top: 7.0em;
+}
+
+.img.image{
+    width: 360px;
+    height: 360px;
+}
+
+#del{
+    display: inline;
+}
+
+#t1{
+    white-space: pre-line;
+}

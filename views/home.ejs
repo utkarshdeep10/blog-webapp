@@ -1,0 +1,17 @@
+<% include ./partials/header.ejs %>
+<div class="ui huge header top attached container center aligned" id="head">The World of Pokemon!</div>
+
+<% blog.forEach(function(blog){ %>
+    <div class="ui container segment">
+        <a href="/blogs/<%= blog._id %>"><div class="image"><img src="<%= blog.image %>" class="ui image"></div></a>
+        <h2> <%= blog.title %> </h2>
+        <div class="description">
+        <p> <%- blog.body.substring(0,500)%>...<a href="/blogs/<%= blog._id %>">Read More</a> <i class="right chevron icon"></i></p>
+        </div>
+        <div class="meta">
+            <h6>Created on: <%= blog.created.toDateString() %>, <%= blog.created.toLocaleTimeString()%></h6>
+        </div>
+    </div>
+<% }); %>
+
+<% include ./partials/footer.ejs %>
